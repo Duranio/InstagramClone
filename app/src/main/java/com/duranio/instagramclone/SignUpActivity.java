@@ -2,6 +2,7 @@ package com.duranio.instagramclone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
     private TextView dataTextView;
     private Button getAllDataButton;
     private String allKickBoxers;
+    private Button toLoginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class SignUpActivity extends AppCompatActivity {
         kickPowerEditText = findViewById(R.id.kickPowerEditText);
         dataTextView = findViewById(R.id.dataTextView);
         getAllDataButton = findViewById(R.id.getAllDataButton);
+        toLoginButton = findViewById(R.id.toLoginButton);
 
         saveTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +111,13 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+
+        toLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
             }
         });
     }
