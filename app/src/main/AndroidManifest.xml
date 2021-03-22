@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.duranio.instagramclone">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -11,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InstagramClone">
         <activity android:name=".SocialMediaActivity"
-            android:theme="@style/noActionBar"/>
+            android:theme="@style/Theme.AppCompat.noActionBar"/>
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignUpActivity">
             <intent-filter>
